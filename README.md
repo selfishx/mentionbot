@@ -1,4 +1,4 @@
-# SuperFast 🔥 ZaraTagAllBot
+# SuperFast 🔥 ZaraTaggerBot
 
 
 <p align="center">
