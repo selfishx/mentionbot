@@ -50,7 +50,7 @@ async def all(event):
   chat_id = event.chat_id
   if event.is_private:
     return await event.respond("__This command Can Be Use In Groups And Channels @Love_Dear_Comrades !__")
-  
+
   is_admin = False
   try:
     partici_ = await client(GetParticipantRequest(
@@ -72,7 +72,7 @@ async def all(event):
       is_admin = True
   if not is_admin:
     return await event.respond("__Only Admins Can Mention All\n\nFor More Go On @Love_Dear_Comrades !__")
-  
+
   if event.pattern_match.group(1) and event.is_reply:
     return await event.respond("__Give me one argument!__")
   elif event.pattern_match.group(1):
@@ -81,16 +81,16 @@ async def all(event):
   elif event.is_reply:
     mode = "text_on_reply"
     msg = await event.get_reply_message()
-    if msg == None:
-        return await event.respond("__I Can't Mention Members For Older Messages! (messages which are sent before I'm added to group)__")
+    if msg is None:
+      return await event.respond("__I Can't Mention Members For Older Messages! (messages which are sent before I'm added to group)__")
   else:
     return await event.respond("__Reply To a Message Or Give Me Some Text To Mention Others\n\nMade bY @The_Death_Soul !__")
-  
+
   spam_chats.append(chat_id)
   usrnum = 0
   usrtxt = ''
   async for usr in client.iter_participants(chat_id):
-    if not chat_id in spam_chats:
+    if chat_id not in spam_chats:
       break
     usrnum += 1
     usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
@@ -110,14 +110,13 @@ async def all(event):
 
 @client.on(events.NewMessage(pattern="^/cancel$"))
 async def cancel_spam(event):
-  if not event.chat_id in spam_chats:
+  if event.chat_id not in spam_chats:
     return await event.respond('__There Is No Proccess On Going @Love_Dear_Comrades...__')
-  else:
-    try:
-      spam_chats.remove(event.chat_id)
-    except:
-      pass
-    return await event.respond('__Stopped.__')
+  try:
+    spam_chats.remove(event.chat_id)
+  except:
+    pass
+  return await event.respond('__Stopped.__')
 
 print(">> ZARA TAGGERBOT STARTED @Love_Dear_Comrades<<")
 client.run_until_disconnected()
