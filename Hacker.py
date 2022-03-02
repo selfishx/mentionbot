@@ -84,7 +84,7 @@ async def all(event):
     if msg == None:
         return await event.respond("__I Can't Mention Members For Older Messages! (messages which are sent before I'm added to group)__")
   else:
-    return await event.respond("__Reply To a Message Or Give Me Some Text To Mention Others\n\nMade bY @The_Death_Soul !__")
+    return await event.respond("__Reply To a Message Or Give Me Some Text To Mention Others\n\nMade bY @Love_Dear_Comrades !__")
   
   spam_chats.append(chat_id)
   usrnum = 0
@@ -96,7 +96,7 @@ async def all(event):
     usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
     if usrnum == 5:
       if mode == "text_on_cmd":
-        txt = f"{usrtxt}\n\n{msg}\n\nMade bY @The_Death_Soul ✌️🔥"
+        txt = f"{usrtxt}\n\n{msg}\n\nMade bY @Love_Dear_Comrades ✌️🔥"
         await client.send_message(chat_id, txt)
       elif mode == "text_on_reply":
         await msg.reply(usrtxt)
