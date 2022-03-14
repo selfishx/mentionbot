@@ -21,12 +21,12 @@ spam_chats = []
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   await event.reply(
-    "__**𝐈'𝐦 𝐓𝐚𝐠𝐀𝐥𝐥 𝐁𝐨𝐭**, 𝐢 𝐂𝐚𝐧 𝐌𝐞𝐧𝐭𝐢𝐨𝐧 𝐀𝐥𝐥 𝐌𝐞𝐦𝐛𝐞𝐫𝐬 𝐈𝐧 𝐆𝐫𝐨𝐮𝐩 𝐎𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 👻\n𝐂𝐥𝐢𝐜𝐤 **/help** 𝐅𝐨𝐫 𝐌𝐨𝐫𝐞 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧__\n\n 𝐅𝐨𝐥𝐥𝐨𝐰 [The_Death_Soul](https://t.me/Love_Dear_Comrades) 𝗢𝗻 𝐓𝐞𝐥𝐞𝐆𝐫𝐚𝐦",
+    "__**𝐈'𝐦 𝐓𝐚𝐠𝐀𝐥𝐥 𝐁𝐨𝐭**, 𝐢 𝐂𝐚𝐧 𝐌𝐞𝐧𝐭𝐢𝐨𝐧 𝐀𝐥𝐥 𝐌𝐞𝐦𝐛𝐞𝐫𝐬 𝐈𝐧 𝐆𝐫𝐨𝐮𝐩 𝐎𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 👻\n𝐂𝐥𝐢𝐜𝐤 **/help** 𝐅𝐨𝐫 𝐌𝐨𝐫𝐞 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧__\n\n 𝐅𝐨𝐥𝐥𝐨𝐰 [classy_network](https://t.me/classy_network) 𝗢𝗻 𝐓𝐞𝐥𝐞𝐆𝐫𝐚𝐦",
     link_preview=False,
     buttons=(
       [
-        Button.url('✨𝙎𝙐𝙋𝙋𝙊𝙍𝙏✨', 'https://t.me/Love_Dear_Comrades'),
-        Button.url('🍹𝙊𝙒𝙉𝙀𝙍🍹', 'https://t.me/The_Death_Soul')
+        Button.url('✨𝙎𝙐𝙋𝙋𝙊𝙍𝙏✨', 'https://t.me/classy_network'),
+        Button.url('🍹𝙊𝙒𝙉𝙀𝙍🍹', 'https://t.me/classy_network')
       ]
     )
   )
@@ -39,8 +39,8 @@ async def help(event):
     link_preview=False,
     buttons=(
       [
-        Button.url('✨𝙎𝙐𝙋𝙋𝙊𝙍𝙏✨', 'https://t.me/Love_Dear_Comrades'),
-        Button.url('🍹𝙊𝙒𝙉𝙀𝙍🍹', 'https://t.me/The_Death_Soul')
+        Button.url('✨𝙎𝙐𝙋𝙋𝙊𝙍𝙏✨', 'https://t.me/classy_network'),
+        Button.url('🍹𝙊𝙒𝙉𝙀𝙍🍹', 'https://t.me/classy_network')
       ]
     )
   )
@@ -49,7 +49,7 @@ async def help(event):
 async def all(event):
   chat_id = event.chat_id
   if event.is_private:
-    return await event.respond("__This command Can Be Use In Groups And Channels @Love_Dear_Comrades !__")
+    return await event.respond("__This command Can Be Use In Groups And Channels @classy_network !__")
   
   is_admin = False
   try:
@@ -71,7 +71,7 @@ async def all(event):
     ):
       is_admin = True
   if not is_admin:
-    return await event.respond("__Only Admins Can Mention All\n\nFor More Go On @Love_Dear_Comrades !__")
+    return await event.respond("__Only Admins Can Mention All\n\nFor More Go On @classy_network !__")
   
   if event.pattern_match.group(1) and event.is_reply:
     return await event.respond("__Give me one argument!__")
@@ -96,7 +96,7 @@ async def all(event):
     usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
     if usrnum == 5:
       if mode == "text_on_cmd":
-        txt = f"{usrtxt}\n\n{msg}\n\nMade bY @Love_Dear_Comrades ✌️🔥"
+        txt = f"{usrtxt}\n\n{msg}\n\nMade bY @classy_network✌️🔥"
         await client.send_message(chat_id, txt)
       elif mode == "text_on_reply":
         await msg.reply(usrtxt)
@@ -111,7 +111,7 @@ async def all(event):
 @client.on(events.NewMessage(pattern="^/cancel$"))
 async def cancel_spam(event):
   if not event.chat_id in spam_chats:
-    return await event.respond('__There Is No Proccess On Going @Love_Dear_Comrades...__')
+    return await event.respond('__There Is No Proccess On Going @classy_network..__')
   else:
     try:
       spam_chats.remove(event.chat_id)
@@ -119,5 +119,5 @@ async def cancel_spam(event):
       pass
     return await event.respond('__Stopped.__')
 
-print(">> ZARA TAGGERBOT STARTED @Love_Dear_Comrades<<")
+print(">> OWNER TAGGERBOT STARTED @classy_network <<")
 client.run_until_disconnected()
