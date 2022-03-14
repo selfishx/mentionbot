@@ -1,6 +1,6 @@
 {
-  "logo":"https://te.legra.ph/file/ad86626774492a0d3d255.jpg",
-  "name": "Zara Tagger Bot",
+  "logo":"https://te.legra.ph/file/86aa550f64231113c8162.jpg",
+  "name": "owner user Tagger Bot",
   "description": "A member tagger bot for telegram Groups.",
   "env": {
     "TOKEN": {
