@@ -1,17 +1,12 @@
-# SuperFast 🔥 Owner user TaggerBot
+# SuperFast 🔥 user TaggerBot
 
 
 <p align="center">
     𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗔𝗡𝗗 𝗨𝗣𝗗𝗔𝗧𝗘𝗦🎑
-    
-![Typing SVG](https://readme-typing-svg.herokuapp.cm/?
-lines=welcome+To+Mentionbot,s+Repo!;A+Simple+member+tagger+bot!)
-    
-(![Typing SVG](https://readme-typing-svg.herokuapp.com/?                                                         lines=welcome+To+mention bot's+Repo!;A+simple+member+tagger+bot!;and+all+futures!)
 
-<p align="center"><a href="https://t.me/classy_network"><img align="center" src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram">
+<p align="center"><a href="https://t.me/classy_empire"><img align="center" src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram">
 </p>
-<p align="center"><a href="https://t.me/invisible_avneesh"><img align="center" src="https://img.shields.io/badge/Join-Official%20Channel-blue.svg?style=for-the-badge&logo=Telegram">
+<p align="center"><a href="https://t.me/classy_empire"><img align="center" src="https://img.shields.io/badge/Join-Official%20Channel-blue.svg?style=for-the-badge&logo=Telegram">
 </p>
 <p align="center"><a href="https://t.me/classy_network"><img src="https://te.legra.ph/file/86aa550f64231113c8162.jpg" width="300"></a></p>
 
