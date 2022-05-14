@@ -3,6 +3,10 @@
 
 <p align="center">
     𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗔𝗡𝗗 𝗨𝗣𝗗𝗔𝗧𝗘𝗦🎑
+    
+![Typing SVG](https://readme-typing-svg.herokuapp.cm/?
+lines=welcome+To+Mentionbot,s+Repo!;A+Simple+member+tagger+bot!)
+    
 (![Typing SVG](https://readme-typing-svg.herokuapp.com/?                                                         lines=welcome+To+mention bot's+Repo!;A+simple+member+tagger+bot!;and+all+futures!)
 
 <p align="center"><a href="https://t.me/classy_network"><img align="center" src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram">
