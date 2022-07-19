@@ -21,35 +21,35 @@ spam_chats = []
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   await event.reply(
-    "__**𝐈'𝐦 𝐦𝐞𝐧𝐭𝐢𝐨𝐧 𝐁𝐨𝐭**, 𝐢 𝐂𝐚𝐧 𝐌𝐞𝐧𝐭𝐢𝐨𝐧 𝐀𝐥𝐥 𝐌𝐞𝐦𝐛𝐞𝐫𝐬 𝐈𝐧 𝐆𝐫𝐨𝐮𝐩 𝐎𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 👻\n𝐂𝐥𝐢𝐜𝐤 **/help** 𝐅𝐨𝐫 𝐌𝐨𝐫𝐞 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧__\n\n 𝐅𝐨𝐥𝐥𝐨𝐰 [classy](https://t.me/classy_empire) 𝗢𝗻 𝐓𝐞𝐥𝐞𝐆𝐫𝐚𝐦",
+    "__**𝐈'𝐦 𝐦𝐞𝐧𝐭𝐢𝐨𝐧 𝐁𝐨𝐭**, 𝐢 𝐂𝐚𝐧 𝐌𝐞𝐧𝐭𝐢𝐨𝐧 𝐀𝐥𝐥 𝐌𝐞𝐦𝐛𝐞𝐫𝐬 𝐈𝐧 𝐆𝐫𝐨𝐮𝐩 𝐎𝐫 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 👻\n𝐂𝐥𝐢𝐜𝐤 **/help** 𝐅𝐨𝐫 𝐌𝐨𝐫𝐞 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧__\n\n 𝐅𝐨𝐥𝐥𝐨𝐰 [Aɴᴏɴʏᴍᴏᴜs](https://t.me/project_anonymous) 𝗢𝗻 𝐓𝐞𝐥𝐞𝐆𝐫𝐚𝐦",
     link_preview=False,
     buttons=(
       [
-        Button.url('SUPPORT', 'https://t.me/classy_EMPIRE'),
-        Button.url('OWNER', 'https://t.me/classy_EMPIRE')
+        Button.url('SUPPORT', 'https://t.me/anonymous_support_group'),
+        Button.url('CHANNEL', 'https://t.me/project_anonymous')
       ]
     )
   )
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**Help Menu of TagAllBot**\n\nCommand: /all\n__You can use this command with text what you want to mention others.__\nExample: `/all Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__.\n\nFollow [𝐜𝐥𝐚𝐬𝐬𝐲](https://t.me/classy_EMPIRE) 𝗢𝗡 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠"
+  helptext = "**Help Menu of TagAllBot**\n\nCommand: /all\n__You can use this command with text what you want to mention others.__\nExample: `/all Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__.\n\nFollow [Aɴᴏɴʏᴍᴏᴜs](https://t.me/project_anonymous) 𝗢𝗡 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠"
   await event.reply(
     helptext,
     link_preview=False,
     buttons=(
       [
-        Button.url('SUPPORT', 'https://t.me/classy_EMPIRE'),
-        Button.url('OWNER', 'https://t.me/classy_EMPIRE')
+        Button.url('SUPPORT', 'https://t.me/anonymous_support_group'),
+        Button.url('CHANNEL', 'https://t.me/project_anonymous')
       ]
     )
   )
   
-@client.on(events.NewMessage(pattern="^/all ?(.*)"))
+@client.on(events.NewMessage(pattern="^/all ?(.*@)"))
 async def all(event):
   chat_id = event.chat_id
   if event.is_private:
-    return await event.respond("__This command Can Be Use In Groups And Channels @classy_EMPIRE !__")
+    return await event.respond("__This command Can Be Use In Groups And Channels Mᴀᴅᴇ Bʏ Aɴᴏɴʏᴍᴏᴜs !__")
   
   is_admin = False
   try:
@@ -71,7 +71,7 @@ async def all(event):
     ):
       is_admin = True
   if not is_admin:
-    return await event.respond("__Only Admins Can Mention All\n\nFor More Go On @classy_EMPIRE !__")
+    return await event.respond("__Only Admins Can Mention All\n\nFor More Go On @project_anonymous !__")
   
   if event.pattern_match.group(1) and event.is_reply:
     return await event.respond("__Give me one argument!__")
@@ -84,7 +84,7 @@ async def all(event):
     if msg == None:
         return await event.respond("__I Can't Mention Members For Older Messages! (messages which are sent before I'm added to group)__")
   else:
-    return await event.respond("__Reply To a Message Or Give Me Some Text To Mention Others\n\nMade bY @CLASSY_EMPIRE !__")
+    return await event.respond("__Reply To a Message Or Give Me Some Text To Mention Others\n\nMade bY @project_anonymous !__")
   
   spam_chats.append(chat_id)
   usrnum = 0
@@ -111,7 +111,7 @@ async def all(event):
 @client.on(events.NewMessage(pattern="^/cancel$"))
 async def cancel_spam(event):
   if not event.chat_id in spam_chats:
-    return await event.respond('__There Is No Proccess On Going @classy_EMPIRE..__')
+    return await event.respond('__There Is No Proccess On Going..__')
   else:
     try:
       spam_chats.remove(event.chat_id)
@@ -119,5 +119,5 @@ async def cancel_spam(event):
       pass
     return await event.respond('__Stopped.__')
 
-print(">> OWNER TAGGERBOT STARTED @classy_EMPIRE <<")
+print(">> Aɴᴏɴʏᴍᴏᴜs Tᴀɢɢᴇʀ Bᴏʏ Sᴛᴀʀᴛᴇᴅ Bʏ  {mention} <<")
 client.run_until_disconnected()
